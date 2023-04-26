@@ -1,0 +1,42 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "aphrodite": "^2.4.0",
+    "axios": "^1.3.5",
+    "bulma": "^0.9.0",
+    "classnames": "^2.2.6",
+    "docx": "^8.0.2",
+    "formik": "^2.0.6",
+    "framer-motion": "^10.12.4",
+    "humps": "^2.0.1",
+    "i18next": "^22.4.14",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "next": "13.3.0",
+    "query-string": "^6.9.0",
+    "react": "18.2.0",
+    "react-custom-checkbox": "^3.1.5",
+    "react-dom": "18.2.0",
+    "react-feather": "^2.0.10",
+    "react-i18next": "^12.2.0",
+    "react-image-picker": "^1.1.1",
+    "react-share": "^4.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-next": "13.3.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  }
+}
