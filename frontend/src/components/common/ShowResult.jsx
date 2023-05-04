@@ -17,7 +17,6 @@ export default function ShowResult({ quiz, score, setStartQuestion }) {
     // const resultItem = useLoad({ url: RESULT.replace('{resultId}', 2), params: { quiz: quiz.id } })
     const newResults = results.response ? results.response.results : []
     const [finResult, setFinResult] = useState('')
-    console.log(finResult)
 
     useEffect(() => {
         // eslint-disable-next-line no-unused-expressions

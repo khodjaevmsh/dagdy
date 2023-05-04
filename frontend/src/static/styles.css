@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'Formular';
+    src: url('../assets/fonts/Formular.ttf');
+    src: url('../assets/fonts/Formular-Medium.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: Formular !important;
+}
+
 .pointer {
     cursor: pointer;
 }
@@ -125,11 +137,11 @@ button {
 
 
 .on {
-    color: #000;
+    color: #45A7F5;
 }
 
 .off {
-    color: #ccc;
+    color: #dddddd;
 }
 
 
@@ -281,4 +293,31 @@ button {
     background-color: transparent !important;
     z-index: 0 !important;
     box-shadow: 0 0 0 0 !important;
+}
+
+.star {
+    width: 100px !important;
+    height: 200px;
+}
+
+.nav-burger {
+    background-color: #45A7F5 !important;
+    color: white !important;
+    border-radius: 50px;
+}
+.navbar-burger span {
+    background-color: currentColor;
+    display: block;
+    height: 1.5px !important;
+    left: calc(50% - 8px);
+    position: absolute;
+    transform-origin: center;
+    transition-duration: 86ms;
+    transition-property: background-color, opacity, transform;
+    transition-timing-function: ease-out;
+    width: 30px;
+    border-radius: 10px !important;
+}
+.sp-line {
+    width: 10px !important;
 }

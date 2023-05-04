@@ -1,24 +1,29 @@
 import { useState } from 'react'
 import { Star } from 'react-feather'
 
-export default function StarRating({ index, answerOption, handleAnswerOptionClick }) {
+export default function StarRating({ answers, handleAnswerOptionClick }) {
     const [rating, setRating] = useState(0)
     const [hover, setHover] = useState(0)
     return (
-        <button
-            type="button"
-            /* eslint-disable-next-line react/no-array-index-key */
-            key={answerOption.id}
-            onClick={() => {
-                handleAnswerOptionClick(answerOption.correct, index)
-                setRating(index)
-            }}
-            onMouseEnter={() => setHover(index)}
-            onMouseLeave={() => setHover(rating)}>
-            <Star
-                size={38}
-                color={index <= (hover || rating) ? '#45A7F5' : '#ddd'}
-                fill={index <= (hover || rating) ? '#45A7F5' : '#ddd'} />
-        </button>
+        <div className="star-rating">
+            {answers.response ? answers.response.results.map((star, index) => {
+                index += 1
+                return (
+                    <button
+                        type="button"
+                        key={index}
+                        className={index <= (hover || rating) ? 'on' : 'off'}
+                        onClick={() => {
+                            setRating(index)
+                            handleAnswerOptionClick(star.correct, star.ball)
+                        }}
+                        onMouseEnter={() => setHover(index)}
+                        onMouseLeave={() => setHover(rating)}
+                    >
+                        <span className="star" style={{ fontSize: 38 }}>&#9733;</span>
+                    </button>
+                )
+            }) : null}
+        </div>
     )
 }

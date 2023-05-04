@@ -61,29 +61,27 @@ export default function Questionn({ quiz, newQuestion, currentQuestion, setCurre
                                 <div className="columns my-4">
                                     <div className="column is-12">
 
-                                        {answers.response ? answers.response.results.map((answerOption, index) => (
+                                        {
                                             type === 'is_checkbox' ? (
                                                 <QuizCheckBox
                                                     handleAnswerOptionClick={handleAnswerOptionClick}
-                                                    answerOption={answerOption} />
+                                                    answers={answers} />
                                             ) : type === 'is_start_rating' ? (
                                                 <StarRating
-                                                    index={index}
                                                     handleAnswerOptionClick={handleAnswerOptionClick}
-                                                    answerOption={answerOption} />
+                                                    answers={answers} />
                                             ) : type === 'is_range' ? (
                                                 <QuizRange
-                                                    index={index}
                                                     handleAnswerOptionClick={handleAnswerOptionClick}
-                                                    answerOption={answerOption} />
+                                                    answers={answers} />
                                             ) : type === 'is_image_picker' ? (
                                                 <h1>Image</h1>
                                             ) : (
                                                 <QuizRadio
-                                                    index={index}
                                                     handleAnswerOptionClick={handleAnswerOptionClick}
-                                                    answerOption={answerOption} />
-                                            ))) : <Loader large center />}
+                                                    answers={answers} />
+                                            )
+                                        }
                                         <button
                                             onClick={() => nextPage()}
                                             className="button is-small px-6 py-4 is-blue my-6">

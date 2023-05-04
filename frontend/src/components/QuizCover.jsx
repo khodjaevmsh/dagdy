@@ -37,7 +37,7 @@ export default function QuizCover() {
                     setCurrentQuestion={setCurrentQuestion} />
             ) : (
                 <>
-                    <h1 className="title is-2 mt-3 has-text-centered mb-6">{t('chooseCategory')}</h1>
+                    <h1 className="title is-2 mt-3 has-text-centered mb-5 pt-4">{t('chooseCategory')}</h1>
                     <div className="columns mx-0 is-centered is-multiline mt-4 disabled">
                         {quizzes.response ? quizzes.response.results.map((item) => (
                             <div key={item.id} className="column is-4" onClick={() => {

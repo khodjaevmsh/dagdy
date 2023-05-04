@@ -1,11 +1,11 @@
-export default function QuizCheckBox({ answerOption, handleAnswerOptionClick }) {
+export default function QuizCheckBox({ answers, handleAnswerOptionClick }) {
     return (
-        <div key={answerOption.id} className="control my-5">
-            <label className="container-checkbox">
+        answers.response ? answers.response.results.map((answerOption) => (
+            <label key={answerOption.id} className="container-checkbox">
                 <input type="checkbox" onClick={() => handleAnswerOptionClick(answerOption.correct, answerOption.ball)} />
                 <span className="checkmark" />
                 <span className="">{answerOption.text}</span>
             </label>
-        </div>
+        )) : null
     )
 }

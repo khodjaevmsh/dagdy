@@ -26,16 +26,16 @@ export default function Layout({ children }) {
     return (
         <>
             <nav className="container pt-5">
-                <div className="navbar custom-nav px-4">
+                <div className="navbar custom-nav px-5 py-2">
                     <div className="navbar-brand">
                         <Link href="/" className="navbar-item">
-                            <h1 onClick={() => router.reload()} className="title is-4 has-text-blue is-uppercase">dagdy.kz</h1>
+                            <h1 onClick={() => router.reload()} className="title is-4 has-text-blue">dagdy.kz</h1>
                         </Link>
 
-                        <Link onClick={() => setMobile(!mobile)} href="#" role="button" className="navbar-burger" aria-label="menu" aria-expanded="false"
+                        <Link onClick={() => setMobile(!mobile)} href="#" role="button" className="navbar-burger nav-burger" aria-label="menu" aria-expanded="false"
                             data-target="navbarBasicExample">
                             <span aria-hidden="true" />
-                            <span aria-hidden="true" />
+                            <span aria-hidden="true" className="sp-line" />
                             <span aria-hidden="true" />
                         </Link>
                     </div>
@@ -43,13 +43,13 @@ export default function Layout({ children }) {
                     <div id="navbarBasicExample" className={mobile ? 'navbar-menu nav-menu is-active' : 'navbar-menu nav-menu'}>
                         <div className="navbar-end">
                             <div className="navbar-item">
-                                <Link href="#" className="has-text-black">{t('test')}</Link>
+                                <Link href="#" className="has-text-black px-3">{t('test')}</Link>
                             </div>
                             <div className="navbar-item">
-                                <Link href="#" className="has-text-black">{t('skills')}</Link>
+                                <Link href="#" className="has-text-black px-3">{t('skills')}</Link>
                             </div>
                             <div className="navbar-item">
-                                <Link href="#" className="has-text-black">{t('contacts')}</Link>
+                                <Link href="#" className="has-text-black px-3">{t('contacts')}</Link>
                             </div>
 
                             <div className="navbar-item">
@@ -71,7 +71,7 @@ export default function Layout({ children }) {
                                                         <a className={code === lang ? 'is-size-6 has-text-blue' : 'is-size-6 has-text-black'} onClick={() => {
                                                             handleTrans(code, label)
                                                             setLang(code)
-                                                        }}>{code}
+                                                        }}>{label}
                                                         </a>
                                                     </div>
                                                 )
